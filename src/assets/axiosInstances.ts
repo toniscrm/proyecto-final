@@ -1,7 +1,8 @@
 import axios from "axios"
 
 const clientsInstance = axios.create({
-    baseURL: "https://cursoreact.ngrok.dev"
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    baseURL: import.meta.env.VITE_API_URL || "",
 })
 
 export { clientsInstance }
